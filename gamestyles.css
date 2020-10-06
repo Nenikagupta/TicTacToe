@@ -1,0 +1,102 @@
+body{
+    background: linear-gradient(
+    135deg,
+    rgba(0,66,77,0.9) 0%,
+    rgba(0,0,0,0.8)100%
+  );
+    text-align: center;
+}
+
+h1{
+    font-size: 5rem;
+    font-family: 'Ubuntu', 'sans-serif';
+    color: rgb(148, 231, 190);
+    animation: moveInFromRight 2s;
+   }
+
+h2{
+    font-size: 3rem;
+    font-family: 'Ranchers', cursive;
+    color:#cecece;
+    animation: movefromLeft 2s;
+}
+
+@keyframes moveInFromRight {
+    0% {
+      transform: translateX(400px) scale(5);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes movefromLeft {
+    0% {
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+  /* board */
+
+  .flex-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .flex-column{
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+  }
+  .flex-wrap{
+      flex-wrap: wrap;
+      height: 432px;
+      width: 432px;
+  }
+  .square {
+    border: 2px solid #cecece;
+    height: 140px;
+    width: 140px;
+}
+#board{
+    box-shadow: 10px 20px 30px 10px rgba(0,255,255,0.15);
+    background-color:rgb(19,19,19);
+    color:#ffffff;
+    text-align: center;
+    font-size: 8rem;
+    animation: fadeIn 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+#reset-button {
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid black;
+    height: 55px;
+    width: 100px;
+    margin-top: 1.2rem;
+    border-radius: 20%;
+    cursor: pointer;
+    color:black;
+}
+
+#reset-button:hover{
+    color:#cecece;
+    background-color: black;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
